@@ -57,7 +57,7 @@ location or storage in a DB
   }
   ```
   
-    *Update service:*
+   *Update service:*
    ```javascript
   {
       "url":".../microservice/v1.0/entityId"
