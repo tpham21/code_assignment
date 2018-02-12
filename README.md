@@ -1,15 +1,15 @@
-Client: Angularjs version 1
-Server: Nodejs
+* Client: Angularjs version 1
+* Server: Nodejs
 
 To start the project, you need to have all dependencies installed.
-Go to *client* folder
-Do **npm install** and **bower install**
-Go to *server* folder
-Do **npm install**
+* Go to *client* folder
+* Do **npm install** and **bower install**
+* Go to *server* folder
+* Do **npm install**
 
 ## How to Run
-  Go to *client* folder and type **npm start**
-  Go to *server* folder and type **npm start**
+  * Go to *client* folder and type **npm start**
+  * Go to *server* folder and type **npm start**
 
 
 # Assigntment:
