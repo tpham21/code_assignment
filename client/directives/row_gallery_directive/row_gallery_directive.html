@@ -1,0 +1,3 @@
+<md-content layout="row" flex layout-wrap id="row_gallery_directive" class="row_gallery_directive">
+	<card-directive ng-repeat = "content in galleryContents" card-content="content" flex="100" flex-gt-sm="{{content.flex}}" class="row_card" id="row_card" ng-if="content.flex"></card-directive>
+</md-content>

@@ -1,0 +1,18 @@
+.list_documents h3{
+	font-size:25px;
+	font-weight: 350;
+	letter-spacing: 3px;
+	padding:0px;
+}
+
+.list_documents{
+	height:100vh;
+}
+
+.md-button{
+	min-width: 0px !important;
+}
+
+.card_directive .card_descriptions{
+	padding: 0px !important;
+}

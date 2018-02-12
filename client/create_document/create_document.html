@@ -1,0 +1,81 @@
+<md-content class="create_document" layout-padding layout="column" flex>
+	<section>
+		<div layout="row" flex>
+			<h3 flex>Document Detail</h3>	
+			<div>
+				<md-button ng-if="!onPreview" ng-click="showPreview()" ng-disabled="documentForm.$invalid">	
+			        <md-icon md-svg-src="/icons/ic_preview.svg"></md-icon>
+			        Preview
+			    </md-button>
+			    <md-button ng-if="onPreview" ng-click="cancelPreview()" ng-disabled="documentForm.$invalid">	
+			      	Back
+			    </md-button>  
+			</div>
+		</div>
+	</section>
+	<md-content flex layout-margin>
+		<card-directive card-content="cardContent" ng-if="onPreview"></card-directive>
+
+		<form name="documentForm" ng-show="!onPreview">
+			<md-input-container class="md-block">
+	        	<label>Title</label>
+	        	<input ng-model="documentObj.title" required>
+	      	</md-input-container>
+
+	      	<md-input-container class="md-block">
+	        	<label>Subtitle</label>
+	        	<input name="subtitle" ng-model="documentObj.subtitle" required>
+	      	</md-input-container>
+
+	      	<md-input-container class="md-block">
+	          <label>Formatted Text</label>
+	          <textarea ng-model="documentObj.formattedText"></textarea>
+	        </md-input-container>
+
+	        <md-input-container class="md-block">
+	        	<label>Image URI</label>
+	        	<input name="imageUri" ng-model="documentObj.image.imageUri" required>
+	      	</md-input-container>
+
+	    	<md-content>
+	    		<md-card ng-repeat="btn in documentObj.buttons track by $index">
+			        <md-card-header layout="row" flex>
+			          <md-card-header-text flex>
+			            <span class="md-title">Button</span>
+			          </md-card-header-text>
+			          <div>
+			          		<md-button ng-if="$index===(documentObj.buttons.length-1)" ng-click="addButton(1)">	
+			          		 	<md-icon md-svg-src="/icons/ic_add.svg"></md-icon>
+			          		 	More Button
+			          		</md-button> 
+			          		<md-button ng-if="$index===(documentObj.buttons.length-1) && $index!=0" ng-click="addButton(0)">
+ 								<md-icon md-svg-src="/icons/ic_clear.svg"></md-icon>
+ 								Clear
+ 							</md-button>
+			          </div>
+			        </md-card-header>
+			       
+			        <md-card-content>
+			          	<md-input-container class="md-block">
+				        	<label>Button Title</label>
+				        	<input ng-model="btn.title" required>
+				      	</md-input-container>
+				      	<md-input-container class="md-block">
+				        	<label>URI Action</label>
+				        	<input ng-model="btn.openUriAction.uri" required>
+				      	</md-input-container>
+			        </md-card-content>
+			      </md-card>
+	    	</md-content>  	
+		</form>
+	</md-content>
+	<footer>
+		<md-content layout="row" flex>
+			<div hide-xs hide-sm flex-gt-md="20" flex="10"></div>
+			<md-button ng-click="onCancel()" flex><a href="">Back</a></md-button>
+			<md-button ng-disabled="documentForm.$invalid"  ng-click="onSubmit(1)" flex><a href="">DownLoad</a></md-button>
+		 	<md-button class="md-raised md-primary" ng-disabled="documentForm.$invalid" ng-click="onSubmit()" flex>Save</md-button>
+		 	<div hide-xs hide-sm flex-gt-md="20" flex="10"></div>
+		</md-content>      
+	</footer>	
+</md-content>

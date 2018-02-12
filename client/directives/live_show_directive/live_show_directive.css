@@ -1,0 +1,96 @@
+.live_show_directive{
+	margin:0px;
+	position: relative; 
+	background-color: rgba(255, 0, 0, 0);
+	box-shadow: none !important;
+	overflow:hidden;
+}
+
+.live_show_directive .card-image{
+	display: block;
+	filter: brightness(80%);
+	object-fit: cover;
+
+	/*-webkit-animation: zoom 50s; /* Chrome, Safari, Opera */
+    /*animation: zoom 50s; */
+}
+
+.live_show_directive md-card-content{
+	position: absolute; 
+	top:0%;
+	padding:20px !important;
+	left: 0; 
+	width: 100%; 
+}
+
+.live_show_directive .md-headline{
+	letter-spacing: 5px;
+}
+
+.live_show_directive .md-subhead{
+	letter-spacing: 2px;
+	line-height: 30px;
+	padding-top:16px !important;
+	margin-right:100px;
+}
+
+.live_show_directive md-divider{
+	margin: 10px 20px 0px 0px !important;
+}
+
+.live_show_directive p{
+	font-size:16px !important;
+	letter-spacing: 4px;
+	margin-top:0px !important;
+	padding: 0px 16px 16px;
+	line-height: 30px;
+	margin-right:100px;
+}
+
+.active-image{
+	display: block;
+	filter: brightness(90%);
+	object-fit: cover;
+	height:100vh;
+}
+
+.inactive-image{
+	display:none;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@-webkit-keyframes zoom {
+    from {
+    	-webkit-transform: scale(1,1);
+    }
+    to {
+    	-webkit-transform: scale(2, 2);
+    }
+}
+
+/* Standard syntax */
+@keyframes zoom {
+   from {
+        transform: scale(1,1);
+   }
+   to {
+        transform: scale(2,2);
+   }
+}

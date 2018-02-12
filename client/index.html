@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app = 'myApp'>
+	<head>
+		  <title></title>
+		  <base href='/'>
+		  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+		  <link rel="stylesheet" href="css/animations.css">
+		  <link rel="stylesheet" href="css/style.css">
+		  <link rel="stylesheet" href="directives/header_directive/header_directive.css">
+		  <link rel="stylesheet" href="directives/left_menu_directive/left_menu_directive.css">
+		  <link rel="stylesheet" href="directives/card_directive/card_directive.css">
+		  <link rel="stylesheet" href="directives/horizontal_gallery_directive/horizontal_gallery_directive.css">
+
+		  <link rel="stylesheet" href="directives/row_gallery_directive/row_gallery_directive.css">
+		  <link rel="stylesheet" href="directives/live_show_directive/live_show_directive.css">
+		  <link rel="stylesheet" href="directives/column_gallery_directive/column_gallery_directive.css">
+		  <link rel="stylesheet" href="directives/info_gallery_directive/info_gallery_directive.css">
+		  <link href="bower_components/angular-material-data-table/dist/md-data-table.min.css" rel="stylesheet" type="text/css"/>
+
+		   <!--//////////////////	BOWER COMPONENT  ////////////////////-->
+		  <script  src="bower_components/angular/angular.min.js"></script>
+		  <script  src="bower_components/angular-route/angular-route.min.js"></script>
+		  <script  src="bower_components/angular-animate/angular-animate.min.js"></script>
+		  <script  src="bower_components/angular-resource/angular-resource.min.js"></script>
+		  <script  src="bower_components/angular-aria/angular-aria.min.js"></script>
+		  <script  src="bower_components/angular-material/angular-material.min.js"></script>
+		  <script src="bower_components/angular-css/angular-css.min.js"></script>
+		  <script src="/bower_components/angular-sanitize/	angular-sanitize.js"></script>
+		  <script type="text/javascript" src="bower_components/angular-material-data-table/dist/md-data-table.min.js"></script>
+		  <script src="/bower_components/angular-resource/angular-resource.js"></script>
+
+		  <script  src ="app.js"></script>
+
+
+
+		  <!--//////////////////	CONTROLLER  ////////////////////-->
+		  <script src="main_page/main_page.js"></script>
+		  <script src="create_document/create_document.js"></script>
+		  <script src="list_documents/list_documents.js"></script>
+
+		  <!--//////////////////	SERVICE 	////////////////////-->
+		  <script src="services/documentService.js"></script>
+
+		  <!--//////////////////	DIRECTIVE 	////////////////////-->
+		  <script src="directives/header_directive/header_directive.js"></script>
+		  <script src="directives/left_menu_directive/left_menu_directive.js"></script>
+		  <script src="directives/card_directive/card_directive.js"></script>
+		  <script src="directives/horizontal_gallery_directive/horizontal_gallery_directive.js"></script>
+		  <script src="directives/horizontal_scroll_directive/horizontal_scroll_directive.js"></script>
+		  <script src="directives/row_gallery_directive/row_gallery_directive.js"></script>
+		  <script src="directives/column_gallery_directive/column_gallery_directive.js"></script>
+		  <script src="directives/info_gallery_directive/info_gallery_directive.js"></script>
+		  <script src="directives/live_show_directive/live_show_directive.js"></script>
+
+		  <!--//////////////////	CONFIG 	////////////////////-->
+		  <script src="config.js"></script>
+
+
+	</head>
+	<body ng-controller ="mainCtrl">
+		  	<md-content layout="row" flex>
+		  		<div hide-xs hide-sm  flex="10"></div>
+				<div flex>
+					<div ng-view="" autoscroll="true"></div>
+				</div>
+				<div hide-xs hide-sm flex="10"></div> 
+			</md-content>
+	</body>
+</html>

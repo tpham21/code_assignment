@@ -1,0 +1,11 @@
+<md-card class="live_show_directive" id="live_show_directive">
+	<img ng-repeat="content in galleryContents" src="{{content.img}}" ng-class="$index===selectedIndex?'active-image fade':'inactive-image'">
+	<md-card-content>
+		<md-card-title layout="row" flex layout-wrap>
+	        <md-card-title-text flex-gt-sm="40" flex= "100">
+	            <span class="md-headline"  ng-style ="{'color': galleryContents[selectedIndex].title.fontColor}" >{{galleryContents[selectedIndex].title.info}}</span>
+	            <span class="md-subhead" ng-style ="{'color': galleryContents[selectedIndex].subtitle.fontColor}">{{galleryContents[selectedIndex].subtitle.info}}</span>
+	        </md-card-title-text>
+	    </md-card-title>
+	</md-card-content>
+</md-card>

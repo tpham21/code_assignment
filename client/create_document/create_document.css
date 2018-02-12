@@ -1,0 +1,15 @@
+.create_document h3{
+	font-size:25px;
+	font-weight: 350;
+	letter-spacing: 3px;
+	padding:0px;
+}
+
+.create_document{
+	height:100vh;
+}
+
+.card-image{
+	width:100% !important;
+	margin-top:40px !important;
+}

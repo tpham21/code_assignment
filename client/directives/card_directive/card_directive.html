@@ -1,0 +1,35 @@
+<md-card class="card_directive" id="card_directive">
+	<md-content>
+		<img src="{{cardContent.img.url}}" class="card-image" ng-if="cardContent.img">
+	    <md-card-content class="overlap_content" ng-if="cardContent.img">
+	    	<md-card-title>
+		        <md-card-title-text ng-if="cardContent.img.title.info || cardContent.img.subtitle.info">
+		            <span class="md-headline"  ng-style ="{'color': cardContent.img.title.fontColor}" >{{cardContent.img.title.info}}</span>
+		            <md-divider  class="divider" ng-style ="{'border-color': cardContent.img.title.fontColor}" ng-if="cardContent.img.subtitle || cardContent.img.description"></md-divider>
+		            <span class="md-subhead" ng-style ="{'color': cardContent.img.subtitle.fontColor}">{{cardContent.img.subtitle.info}}</span>
+		        </md-card-title-text>
+		    </md-card-title>
+		    <p ng-style ="{'color': cardContent.img.description.fontColor}">{{cardContent.img.description.info}}</p>
+	    </md-card-content>
+
+	    <md-card-content ng-if="cardContent.title || cardContent.substitle || cardContent.description">
+	    	<md-card-title>
+		        <md-card-title-text>
+		            <span class="md-headline"  ng-style ="{'color': cardContent.title.fontColor}" >{{cardContent.title.info}}</span>
+		            <md-divider  class="divider" ng-style ="{'border-color': cardContent.title.fontColor}" ng-if="cardContent.subtitle || cardContent.description"></md-divider>
+		            <span class="md-subhead" ng-style ="{'color': cardContent.subtitle.fontColor}">{{cardContent.subtitle.info}}</span>
+		        </md-card-title-text>
+		    </md-card-title>
+		    <div class="card_descriptions">
+			    <span ng-repeat= "description in cardContent.descriptions.infos track by $index" ng-style ="{'color':cardContent.descriptions.fontColor}">
+			    	<md-divider  class="divider" ng-style ="{'border-color': cardContent.descriptions.fontColor}" ng-if="description ==='divider'"></md-divider>
+			    	<br ng-if="description ==='break'">
+			    	<span ng-if="description!=='divider' && description!=='break'" ng-bind-html="description"><br></span>
+			    </span>
+		    </div>
+	    </md-card-content>
+	    <md-card-actions layout="row" layout-align="end center" ng-if="cardContent.buttons">
+		   <md-button ng-repeat=" btn in cardContent.buttons"><a ng-href="{{btn.uri}}">{{btn.title}}</a></md-button>
+		</md-card-actions>
+    </md-content>
+</md-card>

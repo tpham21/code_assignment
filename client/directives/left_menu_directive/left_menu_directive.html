@@ -1,0 +1,25 @@
+<md-sidenav
+  class="md-sidenav-left left-menu-bar"
+  md-component-id="left"
+  md-is-locked-open="$mdMedia('gt-md')"
+  md-whiteframe="4"
+  ng-style="{'background-color': menuContent.backgroundColor}"
+  >
+  <md-toolbar ng-if="menuContent.logo" md-colors="::{background: 'white'}">
+        <img ng-src="{{menuContent.logo}}">
+  </md-toolbar>
+  <md-content layout-padding  ng-style="{'color': menuContent.fontColor, 'background-color': menuContent.backgroundColor}">
+   <ul>
+    <li ng-repeat="item in menuContent.menuList" class="menu_item" ng-mouseenter="hoveredItem=item.url" ng-mouseleave="hoveredItem=''" ng-click="changeSelect(item)" >
+        <a ng-style="{'color': ((selectedItem===item.url)?menuContent.onSelectFontColor:((hoveredItem===item.url)?menuContent.onHoverFontColor:menuContent.fontColor))}"  ng-href="#">{{item.name}}</a>
+        <ul ng-if="item.subMenu">
+            <li ng-repeat="sub in item.subMenu"><a href="http://google.com" ng-style="{'color': menuContent.fontColor}">{{sub.name}}</a></li>
+        </ul>
+    </li>
+  </ul>
+  </md-content>
+</md-sidenav>
+
+   
+
+

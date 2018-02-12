@@ -1,0 +1,18 @@
+.left-menu-bar{
+	padding-top:25px;
+	text-transform: uppercase;
+	height:100vh;
+	font-size:14px;
+}
+
+.left-menu-bar .menu_item{
+	padding: 5px 20px;
+}
+
+.left-menu-bar a{
+	text-decoration: none;
+}
+
+.left-menu-bar li:focus {
+    outline: 0;
+}

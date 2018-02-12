@@ -1,0 +1,5 @@
+<md-content layout="row" flex layout-wrap id="column_gallery_directive" class="column_gallery_directive">
+	<md-content ng-repeat = "columnContent in columnContents" flex="{{Math.floor(100/columnContents.length)}}" layout="column">
+		<card-directive ng-repeat = "content in columnContent" card-content="content" class="column_card" id="column_card" ng-click="onCardSelect(content)"></card-directive>	
+	</md-content>
+</md-content>

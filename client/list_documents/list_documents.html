@@ -1,0 +1,32 @@
+<md-content class="list_documents" layout-padding layout="column" flex>
+	<section>
+		<div layout="row" flex>
+			<h3 flex>Documents</h3>	
+			<div>
+				<md-button  ng-click="onViewSwitch('tile')" ng-disabled="viewOption==='tile'"  ng-if="selected.length==0">
+			        <md-icon md-svg-src="/icons/ic_tileView.svg"></md-icon>
+			        <span hide-sm hide-xs>Tile View</span>
+			    </md-button>
+			    <md-button ng-click="onViewSwitch('list')" ng-disabled="viewOption==='list'" ng-if="selected.length==0">	
+			      	<md-icon md-svg-src="/icons/ic_listView.svg"></md-icon>	
+			      	<span hide-sm hide-xs>List View</span>
+			    </md-button>
+			    <md-button ng-click="newDocument()"  ng-if="selected.length==0">
+			        <md-icon md-svg-src="/icons/ic_add.svg"></md-icon>
+			        <span hide-sm hide-xs>New Document</span>
+			    </md-button> 
+			    <md-button ng-click="deleteDocument()" ng-if="selected.length>0">
+			        <md-icon md-svg-src="/icons/ic_delete.svg"></md-icon>
+			        <span hide-sm hide-xs>Delete Document</span>
+			    </md-button>  
+			</div>
+		</div>
+	</section>
+	<md-content flex layout-margin>
+		<div ng-include="documentViewTemplate"></div>	
+	</md-content>
+	<footer>
+		<md-table-pagination md-limit="pagination.limit" md-page="pagination.page" md-total="{{pagination.count}}"  md-on-paginate="logPagination"></md-table-pagination>
+
+	</footer>
+</md-content>
