@@ -29,7 +29,7 @@ location or storage in a DB
     * Service should determine location of operation (DB, file system, based on entity being edited or created)
   
   ## Explain what I have done for Microservice
-  I was not sure what does the service is required to do, so I was trying to make it like a central service, so other services can connect and talk to.
+  I was not sure what are the requirements for service, so I was trying to make it like a central service, and that makes other services connect and talk to.
  
  *Create new Service:*
   ```javascript
